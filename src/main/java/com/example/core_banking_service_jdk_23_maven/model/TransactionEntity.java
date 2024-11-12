@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @Builder
 @Getter
 @Setter
@@ -14,7 +16,7 @@ public class TransactionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    private BigDecimal amount;
     @Enumerated(EnumType.STRING)
     private TransactionType transactionType;
 
